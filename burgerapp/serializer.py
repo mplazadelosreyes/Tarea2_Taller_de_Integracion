@@ -9,8 +9,11 @@ class HamburguesaSerializer(serializers.ModelSerializer):
     ingredientes = serializers.SerializerMethodField()
 
     def get_ingredientes(self, ingredientes):
-        ingrediente_path = URL + "{}".format(ingredientes.id)
-        return ingrediente_path
+        ingredientes_paths = []
+        lista = ingredientes.ingredientes.all()
+        for elem in lista:
+            ingredientes_paths.append(URL + "{}".format(elem.id))
+        return ingredientes_paths
 
     class Meta:
         model = Hamburguesa
@@ -21,3 +24,6 @@ class IngredienteSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Ingrediente
         fields = ['id', 'nombre', 'descripcion']
+
+
+
