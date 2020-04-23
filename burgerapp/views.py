@@ -16,7 +16,7 @@ def hamburguesa_list(request):
             'request': request,
         }
         snippets = Hamburguesa.objects.all()
-        serializer = HamburguesaSerializer(snippets,context=serializer_context, many=True)
+        serializer = HamburguesaSerializer(snippets, context=serializer_context, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
