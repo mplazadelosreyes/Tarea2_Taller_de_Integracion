@@ -14,4 +14,3 @@ class Hamburguesa(models.Model):
     imagen = models.TextField()
     ingredientes = models.ManyToManyField(Ingrediente, blank=True)
 
-    #python manage.py makemigrations burgerapp

@@ -2,7 +2,7 @@ from .models import Hamburguesa, Ingrediente
 from rest_framework import serializers
 
 
-class HamburguesaSerializer(serializers.HyperlinkedModelSerializer):
+class HamburguesaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hamburguesa
         fields = ['id', 'nombre', 'descripcion', 'precio', 'imagen', 'ingredientes']
