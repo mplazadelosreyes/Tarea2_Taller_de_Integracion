@@ -1,15 +1,16 @@
 from django.urls import path, include
+from rest_framework.urlpatterns import format_suffix_patterns
 from rest_framework import routers
-from .views import HamburguesaViewSet, IngredienteViewSet
-
-
-router = routers.DefaultRouter()
-router.register('hamburguesa', HamburguesaViewSet, 'api_nps')
-router.register('ingrediente', IngredienteViewSet, 'api_nps_response')
+from burgerapp import views
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('hamburguesa/', views.hamburguesa_list),
+    path('ingrediente/', views.ingrediente_list),
+    path('ingrediente/<int:pk>', views.ingrediente_detail),
+
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
 
 
 
