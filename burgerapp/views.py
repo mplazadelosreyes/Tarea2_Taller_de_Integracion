@@ -28,7 +28,7 @@ def hamburguesa_list(request):
         return Response("Input invalido", status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'DELETE'])
+@api_view(['GET', 'DELETE', 'PATCH'])
 def hamburguesa_detail(request, pk):
     try:
         hamburguesa = Hamburguesa.objects.get(pk=pk)
@@ -43,6 +43,15 @@ def hamburguesa_detail(request, pk):
     elif request.method == 'DELETE':
         hamburguesa.delete()
         return Response("Hamburguesa eliminada", status=status.HTTP_200_OK)
+
+    elif request.method == 'PATCH':
+        hamburguesa = Hamburguesa.objects.get(pk=pk)
+        serializer = HamburguesaSerializer(hamburguesa, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response("Parametros invalidos", status=status.HTTP_400_BAD_REQUEST)
+
 
 
 @api_view(['GET', 'POST'])
