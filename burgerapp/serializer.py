@@ -3,6 +3,7 @@ from rest_framework import serializers
 
 URL = "http://127.0.0.1:8000/ingrediente/"
 
+
 class HamburguesaSerializer(serializers.ModelSerializer):
 
     ingredientes = serializers.SerializerMethodField()
@@ -11,7 +12,7 @@ class HamburguesaSerializer(serializers.ModelSerializer):
         ingredientes_paths = []
         lista = ingredientes.ingredientes.all()
         for elem in lista:
-            ingredientes_paths.append(URL + "{}".format(elem.id))
+            ingredientes_paths.append({'path': URL + "{}".format(elem.id)})
         return ingredientes_paths
 
     class Meta:
