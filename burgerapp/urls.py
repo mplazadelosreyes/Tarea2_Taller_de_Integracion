@@ -3,8 +3,8 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from burgerapp import views
 
 urlpatterns = [
-    path('', "Esta es la pagina de Hamburguesas para ver su contenido prueba con /hamburguesa o /ingrediente"),
-    path('hamburguesa', views.hamburguesa_list),
+    path('', ""),
+    path('hamburguesa', views.index, name='index'),
     path('hamburguesa/<slug:pk>', views.hamburguesa_detail),
     path('ingrediente', views.ingrediente_list),
     path('ingrediente/<slug:pk>', views.ingrediente_detail),

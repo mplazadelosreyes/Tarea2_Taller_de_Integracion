@@ -1,12 +1,15 @@
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.http import HttpResponse
 
 from .models import Hamburguesa
 from .models import Ingrediente
 
 from .serializer import IngredienteSerializer, HamburguesaSerializer
 
+def index():
+    return HttpResponse("Bienvenido a la pagina de hamburguesas, prueba /hamburguesa o /ingrediente")
 
 @api_view(['GET', 'POST'])
 def hamburguesa_list(request):
