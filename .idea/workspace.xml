@@ -47,11 +47,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/maripla/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="602">
+              <caret line="122" column="49" lean-forward="false" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -94,11 +104,13 @@
         <option value="$PROJECT_DIR$/burgerapp/views.py" />
         <option value="$PROJECT_DIR$/burgerapp/urls.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/maripla/settings.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="x" value="598" />
+    <option name="y" value="26" />
     <option name="width" value="784" />
     <option name="height" value="811" />
   </component>
@@ -123,6 +135,16 @@
             <path>
               <item name="Tarea2_Taller_de_Integracion" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tarea2_Taller_de_Integracion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tarea2_Taller_de_Integracion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea2_Taller_de_Integracion" type="462c0819:PsiDirectoryNode" />
+              <item name="burgerapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tarea2_Taller_de_Integracion" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Tarea2_Taller_de_Integracion" type="462c0819:PsiDirectoryNode" />
+              <item name="maripla" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -170,7 +192,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="784" height="811" extended-state="0" />
+    <frame x="598" y="26" width="784" height="811" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -257,13 +279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/maripla/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maripla/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -313,6 +328,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maripla/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="122" column="49" lean-forward="false" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
           <folding />
         </state>
       </provider>
