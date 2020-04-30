@@ -8,7 +8,7 @@ from .models import Ingrediente
 
 from .serializer import IngredienteSerializer, HamburguesaSerializer
 
-def index():
+def index(request):
     return HttpResponse("Bienvenido a la pagina de hamburguesas, prueba /hamburguesa o /ingrediente")
 
 @api_view(['GET', 'POST'])
