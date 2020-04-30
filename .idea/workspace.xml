@@ -35,14 +35,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/burgerapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="1575">
               <caret line="105" column="59" lean-forward="false" selection-start-line="105" selection-start-column="59" selection-end-line="105" selection-end-column="59" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,6 +93,7 @@
         <option value="$PROJECT_DIR$/burgerapp/serializer.py" />
         <option value="$PROJECT_DIR$/burgerapp/views.py" />
         <option value="$PROJECT_DIR$/burgerapp/urls.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -112,16 +123,6 @@
             <path>
               <item name="Tarea2_Taller_de_Integracion" type="b2602c69:ProjectViewProjectNode" />
               <item name="Tarea2_Taller_de_Integracion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tarea2_Taller_de_Integracion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tarea2_Taller_de_Integracion" type="462c0819:PsiDirectoryNode" />
-              <item name="burgerapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tarea2_Taller_de_Integracion" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Tarea2_Taller_de_Integracion" type="462c0819:PsiDirectoryNode" />
-              <item name="maripla" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -300,11 +301,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/burgerapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="1575">
           <caret line="105" column="59" lean-forward="false" selection-start-line="105" selection-start-column="59" selection-end-line="105" selection-end-column="59" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
