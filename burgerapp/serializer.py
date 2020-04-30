@@ -1,7 +1,7 @@
 from .models import Hamburguesa, Ingrediente
 from rest_framework import serializers
 
-URL = "https://mariplahamburguesas.herokuapp.com/ingrediente"
+URL = "https://mariplahamburguesas.herokuapp.com/ingrediente/"
 
 
 class HamburguesaSerializer(serializers.ModelSerializer):
