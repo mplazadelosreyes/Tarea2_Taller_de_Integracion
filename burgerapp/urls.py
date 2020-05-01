@@ -5,10 +5,10 @@ from burgerapp import views
 urlpatterns = [
     path('', views.index, name="index"),
     path('hamburguesa', views.hamburguesa_list),
-    path('hamburguesa/<slug:pk>', views.hamburguesa_detail),
+    path('hamburguesa/<str:pk>', views.hamburguesa_detail),
     path('ingrediente', views.ingrediente_list),
-    path('ingrediente/<slug:pk>', views.ingrediente_detail),
-    path('hamburguesa/<int:pk>/ingrediente/<int:pk2>', views.
+    path('ingrediente/<str:pk>', views.ingrediente_detail),
+    path('hamburguesa/<str:pk>/ingrediente/<str:pk2>', views.
          hamburguesa_ingrediente),
 ]
 

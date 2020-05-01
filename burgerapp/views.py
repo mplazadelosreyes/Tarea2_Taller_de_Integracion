@@ -33,7 +33,7 @@ def hamburguesa_list(request):
 @api_view(['GET', 'DELETE', 'PATCH'])
 def hamburguesa_detail(request, *args, **kwargs):
     pk = kwargs['pk']
-    if pk.isdigit():
+    if pk.isnumeric():
         pk = int(pk)
         try:
             hamburguesa = Hamburguesa.objects.get(pk=pk)
@@ -85,7 +85,7 @@ def ingrediente_list(request):
 @api_view(['GET', 'DELETE'])
 def ingrediente_detail(request, *args, **kwargs):
     pk = kwargs['pk']
-    if pk.isdigit():
+    if pk.isnumeric():
         pk = int(pk)
         try:
             ingrediente = Ingrediente.objects.get(pk=pk)
@@ -111,27 +111,33 @@ def ingrediente_detail(request, *args, **kwargs):
 
 
 @api_view(['PUT', 'DELETE'])
-def hamburguesa_ingrediente(request, pk, pk2):
-    try:
-        hamburguesa = Hamburguesa.objects.get(pk=pk)
-    except Hamburguesa.DoesNotExist:
-        return Response("Id de hamburguesa invalido",
-                        status=status.HTTP_404_NOT_FOUND)
-    if request.method == 'PUT':
+def hamburguesa_ingrediente(request, *args, **kwargs):
+    pk = kwargs['pk']
+    pk2 = kwargs['pk2']
+    if ((pk.isnumeric()) and (pk2.isnumeric())):
+        print("ntro")
         try:
-            ingrediente = Ingrediente.objects.get(pk=pk2)
-        except:
-            return Response("Ingrediente inexistente",
+            hamburguesa = Hamburguesa.objects.get(pk=pk)
+        except Hamburguesa.DoesNotExist:
+            return Response("Id de hamburguesa invalido",
                             status=status.HTTP_404_NOT_FOUND)
-        hamburguesa.ingredientes.add(ingrediente)
-        return Response("Ingrediente agregado", status=status.HTTP_201_CREATED)
-    elif request.method == 'DELETE':
-        try:
-            ingrediente = hamburguesa.ingredientes.get(pk=pk2)
-        except:
-            return Response("Ingrediente inexistente en la hamburguesa",
-                            status=status.HTTP_404_NOT_FOUND)
-        hamburguesa.ingredientes.remove(ingrediente)
-        return Response("Ingrediente retirado", status=status.HTTP_200_OK)
-
+        if request.method == 'PUT':
+            try:
+                ingrediente = Ingrediente.objects.get(pk=pk2)
+            except:
+                return Response("Ingrediente inexistente",
+                                status=status.HTTP_404_NOT_FOUND)
+            hamburguesa.ingredientes.add(ingrediente)
+            return Response("Ingrediente agregado", status=status.HTTP_201_CREATED)
+        elif request.method == 'DELETE':
+            try:
+                ingrediente = hamburguesa.ingredientes.get(pk=pk2)
+            except:
+                return Response("Ingrediente inexistente en la hamburguesa",
+                                status=status.HTTP_404_NOT_FOUND)
+            hamburguesa.ingredientes.remove(ingrediente)
+            return Response("Ingrediente retirado", status=status.HTTP_200_OK)
+    else:
+        return Response("id invalidos, debes ingresar enteros",
+                        status=status.HTTP_400_BAD_REQUEST)
     
