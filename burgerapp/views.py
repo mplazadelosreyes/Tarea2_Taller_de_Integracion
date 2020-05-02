@@ -78,7 +78,7 @@ def ingrediente_list(request):
         serializer = IngredienteSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response("Ingrediente creado", status=status.HTTP_201_CREATED)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response("Input invalido", status=status.HTTP_400_BAD_REQUEST)
 
 
